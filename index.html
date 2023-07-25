@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Grid CSS</title>
+	<style>
+		.container {
+			grid-template-columns: 1fr 1fr;
+			display: grid;
+			grid-gap: 10px;
+			grid-auto-rows: 100px;
+		}
+		.item {
+			padding: 10px;
+			border: 1px solid black;
+		}
+		
+	</style>
 </head>
 <body>
-	
+	<div class="container">
+		<div class="item item_1">1</div>
+		<div class="item item_2">2</div>
+		<div class="item item_3">3</div>
+		<div class="item item_4">4</div>
+		<div class="item item_5">5</div>
+		<div class="item item_6">6</div>
+		<div class="item item_7">7</div>
+		<div class="item item_8">8</div>
+	</div>
 </body>
 </html>
