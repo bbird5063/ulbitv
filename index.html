@@ -6,12 +6,43 @@
 	<style>
 		.container {
 			display: flex;
-			flex-direction: row-reverse; / *реверсивное направаление строки */
-		}
+			/*flex-direction: row-reverse;*/
+			height: 98vh; /* на всю высоту экрана(браузера) */
+			/* 
+			ВЫРАВНИВАНИЕ
+			1. выравнивание относительно главной оси: 
+			center, flex-start, flex-end 
+			*/
+			/*justify-content: center;*/
+
+			/* 
+			Отодвинуть друг от друга:display:
+			space-between - одинаковые между ними
+			space-around - одинаковые со всех сторон
+			space-evenly - пространства-равномерно()
+			*/
+			justify-content: space-around; 
+			/*
+
+			2. выравнивание относительно второстепенной оси: 
+			*/
+			align-items: center;
+
+			/*
+			если изменим гланую ось изменим значение flex-direction, то
+			justify-content -> по оси Y (X станет второстепенной)
+			align-items -> по оси X (Y станет главной)
+
+
+			*/
+		} 
 		.item {
 			padding: 48px; /* внутренние отступы */
 			font-size: 25px;
 			border: 1px solid black;
+			/* Высоту и ширину элементов - по содержанию */
+			height: fit-content;
+			width: fit-content;
 		}
 		.item_1 {
 			order: 2;
