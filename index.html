@@ -6,35 +6,9 @@
 	<style>
 		.container {
 			display: flex;
+			flex-direction: column;
 			height: 98vh; /* на всю высоту экрана(браузера) */
-			flex-direction: column; /*-reverse*/
-			/* 
-			ВЫРАВНИВАНИЕ
-			1. выравнивание относительно главной оси: 
-			center, flex-start, flex-end 
-			*/
-			/*justify-content: center;*/
 
-			/* 
-			Отодвинуть друг от друга:display:
-			space-between - одинаковые между ними
-			space-around - одинаковые со всех сторон
-			space-evenly - пространства-равномерно()
-			
-			justify-content: space-around; */
-			/*
-
-			2. выравнивание относительно второстепенной оси: 
-			
-			align-items: center;*/
-
-			/*
-			если изменим гланую ось изменим значение flex-direction, то
-			justify-content -> по оси Y (X станет второстепенной)
-			align-items -> по оси X (Y станет главной)
-
-
-			*/
 		} 
 		.item {
 			padding: 48px; /* внутренние отступы */
@@ -43,18 +17,15 @@
 			/* Высоту и ширину элементов - по содержанию */
 			height: fit-content;
 			width: fit-content;
+			flex-basis: 200px; /* размер относительной главной оси (в любых единицах) */
 		}
 		.item_1 {
-			order: 3;
-			align-self: center;
+			flex-shrink: 2; /* как быстро будет ужиматься элемент при уменьшении экрана */
+			/* при уменьшении экрана .item_1 ужимается в 2 раза быстрее других */
 		}
 		.item_2 {
-			order: 2;
-			align-self: flex-end;
 		}
 		.item_3 {
-			order: 1;
-			align-self: flex-start;
 		}
 	</style>
 </head>
