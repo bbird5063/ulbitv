@@ -6,9 +6,6 @@
 	<style>
 		.container {
 			display: flex;
-			flex-direction: column;
-			height: 98vh; /* на всю высоту экрана(браузера) */
-
 		} 
 		.item {
 			padding: 48px; /* внутренние отступы */
@@ -17,13 +14,12 @@
 			/* Высоту и ширину элементов - по содержанию */
 			height: fit-content;
 			width: fit-content;
-			flex-basis: 200px; /* размер относительной главной оси (в любых единицах) */
+			flex-grow: 1;
 		}
 		.item_1 {
-			flex-shrink: 2; /* как быстро будет ужиматься элемент при уменьшении экрана */
-			/* при уменьшении экрана .item_1 ужимается в 2 раза быстрее других */
 		}
 		.item_2 {
+			flex-grow: 4; 
 		}
 		.item_3 {
 		}
